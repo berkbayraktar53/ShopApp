@@ -77,10 +77,12 @@ namespace ShopApp.WebUI
             services.AddScoped<IProductDal, EfProductDal>();
             services.AddScoped<ICategoryDal, EfCategoryDal>();
             services.AddScoped<ICartDal, EfCartDal>();
+            services.AddScoped<IOrderDal, EfOrderDal>();
 
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<ICartService, CartManager>();
+            services.AddScoped<IOrderService, OrderManager>();
 
             services.AddScoped<ShopApp.WebUI.EmailServices.IEmailSender, SmtpEmailSender>(i => new SmtpEmailSender(
                 Configuration["EmailSender:Host"],
@@ -133,6 +135,16 @@ namespace ShopApp.WebUI
                     name: "cart",
                     pattern: "cart",
                     defaults: new { controller = "Cart", action = "Index" });
+
+                endpoints.MapControllerRoute(
+                    name: "checkout",
+                    pattern: "checkout",
+                    defaults: new { controller = "Cart", action = "Checkout" });
+
+                endpoints.MapControllerRoute(
+                    name: "orders",
+                    pattern: "orders",
+                    defaults: new { controller = "Cart", action = "GetOrders" });
 
                 endpoints.MapControllerRoute(
                     name: "default",

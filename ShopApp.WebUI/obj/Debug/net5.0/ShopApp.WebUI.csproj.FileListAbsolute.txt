@@ -174,3 +174,7 @@ C:\Users\BERK\source\repos\ShopApp\ShopApp.WebUI\obj\Debug\net5.0\Razor\Views\Ac
 C:\Users\BERK\source\repos\ShopApp\ShopApp.WebUI\obj\Debug\net5.0\Razor\Views\Shared\_resultmessage.cshtml.g.cs
 C:\Users\BERK\source\repos\ShopApp\ShopApp.WebUI\obj\Debug\net5.0\Razor\Views\Account\AccessDenied.cshtml.g.cs
 C:\Users\BERK\source\repos\ShopApp\ShopApp.WebUI\obj\Debug\net5.0\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\BERK\source\repos\ShopApp\ShopApp.WebUI\obj\Debug\net5.0\Razor\Views\Cart\Checkout.cshtml.g.cs
+C:\Users\BERK\source\repos\ShopApp\ShopApp.WebUI\bin\Debug\net5.0\IyzipayCore.dll
+C:\Users\BERK\source\repos\ShopApp\ShopApp.WebUI\obj\Debug\net5.0\Razor\Views\Cart\Success.cshtml.g.cs
+C:\Users\BERK\source\repos\ShopApp\ShopApp.WebUI\obj\Debug\net5.0\Razor\Views\Cart\GetOrders.cshtml.g.cs

@@ -1,4 +1,4 @@
-#  Asp.Net Core Mvc ile Alışveriş sitesi
+#  Asp.Net Core Mvc 5.0 ile Alışveriş sitesi
 
 - Katmanlı Mimari ile Proje Geliştirme
 - Repository Design Pattern Kullanımı 

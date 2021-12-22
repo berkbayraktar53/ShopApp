@@ -1,5 +1,6 @@
-#  Asp.Net Core Mvc 5.0 ile Alışveriş sitesi
+#  Asp.Net Core 5.0 ile Alışveriş sitesi
 
+- Asp.Net Core Mvc Yapısı
 - Katmanlı Mimari ile Proje Geliştirme
 - Repository Design Pattern Kullanımı 
 - Data Access Katmanındaki Süreçler

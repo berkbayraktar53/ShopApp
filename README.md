@@ -1,4 +1,4 @@
-#  Asp.Net Core Mvc ile E-Ticaret sitesi
+#  Asp.Net Core Mvc ile Alışveriş sitesi
 
 - Katmanlı Mimari ile Proje Geliştirme
 - Repository Design Pattern Kullanımı 

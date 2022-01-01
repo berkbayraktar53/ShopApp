@@ -53,9 +53,9 @@ namespace ShopApp.Business.Concrete
             return _productDal.GetCountByCategory(category);
         }
 
-        public Product GetProductDetails(int id)
+        public Product GetProductDetails(string url)
         {
-            return _productDal.GetProductDetails(id);
+            return _productDal.GetProductDetails(url);
         }
 
         public List<Product> GetProductsByCategory(string category, int page, int pageSize)
@@ -86,6 +86,11 @@ namespace ShopApp.Business.Concrete
             }
 
             return isValid;
+        }
+
+        public List<Product> GetSearchString(string searchString)
+        {
+            return _productDal.GetSearchResult(searchString);
         }
     }
 }

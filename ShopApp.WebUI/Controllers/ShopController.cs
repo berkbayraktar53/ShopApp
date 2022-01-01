@@ -23,13 +23,13 @@ namespace ShopApp.WebUI.Controllers
             return View();
         }
 
-        public IActionResult Details(int? id)
+        public IActionResult Details(string url)
         {
-            if (id == null)
+            if (url == null)
             {
                 return NotFound();
             }
-            Product product = _productService.GetProductDetails((int)id);
+            Product product = _productService.GetProductDetails(url);
             if (product == null)
             {
                 return NotFound();
@@ -54,6 +54,15 @@ namespace ShopApp.WebUI.Controllers
                     TotalItems = _productService.GetCountByCategory(category),
                     CurrentCategory = category
                 }
+            };
+            return View(model);
+        }
+
+        public IActionResult Search(string q)
+        {
+            var model = new ProductListModel
+            {
+                Products = _productService.GetSearchString(q)
             };
             return View(model);
         }

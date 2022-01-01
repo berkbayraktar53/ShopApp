@@ -41,12 +41,12 @@ namespace ShopApp.DataAccess.Concrete.EntityFramework
             }
         }
 
-        public Product GetProductDetails(int id)
+        public Product GetProductDetails(string url)
         {
             using (var context = new ShopContext())
             {
                 return context.Products
-                    .Where(i => i.Id == id)
+                    .Where(i => i.Url == url)
                     .Include(i => i.ProductCategories)
                     .ThenInclude(i => i.Category)
                     .FirstOrDefault();
@@ -66,6 +66,18 @@ namespace ShopApp.DataAccess.Concrete.EntityFramework
                                 .Where(i => i.ProductCategories.Any(a => a.Category.Name.ToLower() == category.ToLower()));
                 }
                 return products.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            }
+        }
+
+        public List<Product> GetSearchResult(string searchString)
+        {
+            using (var context = new ShopContext())
+            {
+                var products = context
+                    .Products
+                    .Where(i => i.Name.ToLower().Contains(searchString) || i.Description.ToLower().Contains(searchString))
+                    .AsQueryable();
+                return products.ToList();
             }
         }
 
